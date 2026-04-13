@@ -10,44 +10,69 @@
 /* BODY */
 body {
   margin: 0;
-  font-family: Arial;
-  padding-top: 130px;
+  font-family: Arial, sans-serif;
+  padding-top: 100px;
+  background: #f5f5f5;
 }
 
 /* HEADER */
 .topbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
+  padding: 6px 20px;
+
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
   z-index: 1000;
+
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 8px;
 }
 
 .logo img {
-  width: 60px;
+  width: 40px;
 }
 
+.logo h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 11px;
+  color: gray;
+}
+
+/* ACTIONS */
 .actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
+}
+
+.call {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
 }
 
 .email {
   background: #0000a8;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
 }
 
 /* NAVBAR */
@@ -55,13 +80,19 @@ body {
   background: #333;
   color: white;
   display: flex;
-  padding: 10px;
+  padding: 8px 20px;
   gap: 20px;
   align-items: center;
+
   position: fixed;
-  top: 80px;
+  top: 55px;
   width: 100%;
   z-index: 999;
+}
+
+.navbar div {
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .search {
@@ -69,22 +100,25 @@ body {
 }
 
 .search input {
-  padding: 5px;
+  padding: 4px;
+  font-size: 12px;
 }
 
 .search button {
   background: #0000a8;
   color: white;
   border: none;
-  padding: 6px 10px;
+  padding: 4px 8px;
+  font-size: 12px;
 }
 
 /* HERO */
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 20px;
-  max-width: 1200px;
+  gap: 10px;
+  padding: 15px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -95,71 +129,115 @@ body {
 }
 
 .product {
+  background: white;
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
+  padding: 8px;
 }
 
 .product img {
   width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.product h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product p {
+  font-size: 13px;
+}
+
+.product ul {
+  font-size: 12px;
+  padding-left: 15px;
 }
 
 .product button {
   background: #0000a8;
   color: white;
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   border: none;
-  margin-top: 10px;
+  font-size: 12px;
 }
 
+/* BANNER */
 .banner {
-  background: gray;
+  background: #666;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
+  border-radius: 6px;
 }
 
 /* GRID */
 .grid {
   display: flex;
   gap: 10px;
-  padding: 20px;
-  max-width: 1200px;
+  padding: 15px;
+  max-width: 1100px;
   margin: auto;
 }
 
 .card {
   width: 30%;
+  background: white;
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
+  padding: 8px;
 }
 
 .card img {
   width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.card h4 {
+  font-size: 14px;
+}
+
+.card p {
+  font-size: 13px;
 }
 
 .card button {
   background: #0000a8;
   color: white;
   width: 100%;
-  padding: 8px;
+  padding: 6px;
   border: none;
+  font-size: 12px;
 }
 
 /* ABOUT */
 .about {
   display: flex;
-  padding: 30px;
-  max-width: 1200px;
+  gap: 15px;
+  padding: 20px;
+  max-width: 1100px;
   margin: auto;
 }
 
 .left {
   width: 50%;
+}
+
+.left h2 {
+  font-size: 14px;
+}
+
+.left h1 {
+  font-size: 20px;
+}
+
+.left p {
+  font-size: 13px;
 }
 
 .right {
@@ -170,9 +248,11 @@ body {
 }
 
 .box {
+  background: white;
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
 }
 
 </style>
@@ -181,7 +261,6 @@ body {
 
 <body>
 
-<!-- HEADER -->
 <header class="topbar">
   <div class="logo">
     <img src="https://5.imimg.com/data5/SELLER/Logo/2025/4/501513175/IR/WW/WF/63405240/1000369796-90x90.png">
@@ -192,36 +271,33 @@ body {
   </div>
 
   <div class="actions">
-    <div>📞 Call Now</div>
-    <button class="email">Send Email</button>
+    <div class="call">📞 Call</div>
+    <button class="email">Email</button>
   </div>
 </header>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div>☰ Our Products</div>
+  <div>☰ Products</div>
   <div>Profile</div>
   <div>Contact</div>
 
   <div class="search">
-    <input type="text" placeholder="Search Products">
-    <button>Search</button>
+    <input type="text" placeholder="Search">
+    <button>Go</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-
   <div class="products">
 
     <div class="product">
       <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501511807/DN/RI/EP/63405240/product-jpeg-250x250.jpeg">
       <h3>Side Wheel Attachment</h3>
-      <p>₹14,500 / Piece</p>
+      <p>₹14,500</p>
       <ul>
-        <li>Vehicle: Scooter</li>
-        <li>Model: Activa</li>
-        <li>Wheel: 10 inch</li>
+        <li>Scooter</li>
+        <li>Activa</li>
+        <li>10 inch</li>
       </ul>
       <button>Get Quote</button>
     </div>
@@ -229,85 +305,53 @@ body {
     <div class="product">
       <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501511382/IS/TW/OI/63405240/product-jpeg-250x250.jpeg">
       <h3>Handicap Scooter</h3>
-      <p>₹17,500 / Piece</p>
-      <ul>
-        <li>Vehicle: Scooter</li>
-        <li>Model: Activa</li>
-        <li>Wheel: 10 inch</li>
-      </ul>
+      <p>₹17,500</p>
       <button>Get Quote</button>
     </div>
 
   </div>
 
   <div class="banner">
-    <h2>View Complete Range →</h2>
+    View Complete Range →
   </div>
-
 </section>
 
-<!-- PRODUCT GRID -->
 <section class="grid">
-
   <div class="card">
     <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501511398/SF/XC/IV/63405240/handicapped-scooter-250x250.jpeg">
-    <h4>Handicapped Attachment</h4>
+    <h4>Attachment</h4>
     <p>₹17,500</p>
     <button>Get Quote</button>
   </div>
 
   <div class="card">
     <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501511161/SC/UU/BL/63405240/product-jpeg-250x250.jpeg">
-    <h4>Scooter for Handicapped</h4>
+    <h4>Scooter</h4>
     <p>₹17,000</p>
     <button>Get Quote</button>
   </div>
 
   <div class="card">
     <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501510143/LN/MI/VH/63405240/product-jpeg-250x250.jpeg">
-    <h4>Side Wheel Kit</h4>
+    <h4>Wheel Kit</h4>
     <p>₹14,500</p>
     <button>Get Quote</button>
   </div>
-
 </section>
 
-<!-- ABOUT -->
 <section class="about">
-
   <div class="left">
     <h2>WELCOME TO</h2>
     <h1>Deccan Motors</h1>
-    <p>
-      We provide high-quality mobility solutions and scooter modifications.
-    </p>
-    <button class="email">Contact Us</button>
+    <p>We provide mobility solutions.</p>
   </div>
 
   <div class="right">
-
-    <div class="box">
-      <h4>Nature of Business</h4>
-      <p>Manufacturer</p>
-    </div>
-
-    <div class="box">
-      <h4>Employees</h4>
-      <p>Up to 10</p>
-    </div>
-
-    <div class="box">
-      <h4>GST</h4>
-      <p>XXXXXXXX</p>
-    </div>
-
-    <div class="box">
-      <h4>Turnover</h4>
-      <p>40L - 1.5Cr</p>
-    </div>
-
+    <div class="box">Manufacturer</div>
+    <div class="box">10 Employees</div>
+    <div class="box">GST</div>
+    <div class="box">Turnover</div>
   </div>
-
 </section>
 
 </body>
