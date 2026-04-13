@@ -4,7 +4,179 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deccan Motors</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: Arial;
+  padding-top: 130px;
+}
+
+/* HEADER */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.email {
+  background: #0000a8;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #333;
+  color: white;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 999;
+}
+
+.search {
+  margin-left: auto;
+}
+
+.search input {
+  padding: 5px;
+}
+
+.search button {
+  background: #0000a8;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product button {
+  background: #0000a8;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+.banner {
+  background: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  background: #0000a8;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  border: none;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -20,7 +192,7 @@
   </div>
 
   <div class="actions">
-    <div class="call">📞 Call Now</div>
+    <div>📞 Call Now</div>
     <button class="email">Send Email</button>
   </div>
 </header>
@@ -107,9 +279,9 @@
     <h2>WELCOME TO</h2>
     <h1>Deccan Motors</h1>
     <p>
-      We provide high quality scooter side wheel attachments and mobility solutions.
+      We provide high-quality mobility solutions and scooter modifications.
     </p>
-    <button>Contact Us</button>
+    <button class="email">Contact Us</button>
   </div>
 
   <div class="right">
