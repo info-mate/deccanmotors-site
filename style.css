@@ -1,0 +1,70 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  background: #0000a8;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  background: #eee;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero {
+  background: #0000a8;
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.products {
+  padding: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+}
+
+button {
+  background: #0000a8;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.about, .contact {
+  padding: 40px;
+  text-align: center;
+}
+
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
