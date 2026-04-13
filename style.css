@@ -1,102 +1,142 @@
 body {
-  margin: 0;
   font-family: Arial;
+  margin: 0;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-}
-
-.top-header {
-  background: white;
-  padding: 10px;
-}
-
-.header-flex {
+/* HEADER */
+.topbar {
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo-section {
+  display: flex;
+  gap: 10px;
   align-items: center;
 }
 
-.contact button {
-  background: #0000a8;
-  color: white;
-  border: none;
-  padding: 8px;
+.logo-section img {
+  width: 60px;
 }
 
-.nav {
-  background: #0000a8;
-}
-
-.nav ul {
+.header-actions {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  gap: 10px;
+}
+
+.call-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.email-btn {
+  background: #0000a8;
   color: white;
   padding: 10px;
-  justify-content: center;
 }
 
-.hero-grid {
+/* NAVBAR */
+.navbar {
+  background: #333;
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+}
+
+.search {
+  margin-left: auto;
+}
+
+.search input {
+  padding: 5px;
+}
+
+.search button {
+  background: #0000a8;
+  color: white;
+}
+
+/* HERO */
+.hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px;
-  margin-top: 20px;
+  padding: 20px;
 }
 
-.left-grid {
+.left {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
 .product {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   padding: 10px;
-  text-align: center;
 }
 
 .product img {
   width: 100%;
 }
 
-.right-banner {
+.product button {
   background: #0000a8;
+  color: white;
+  width: 100%;
+}
+
+/* RIGHT BANNER */
+.right {
+  background: #666;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* PRODUCT ROW */
 .product-row {
   display: flex;
-  gap: 15px;
-  margin: 30px auto;
+  gap: 10px;
+  padding: 20px;
 }
 
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   padding: 10px;
   width: 30%;
-  text-align: center;
 }
 
 .card img {
   width: 100%;
 }
 
-button {
+.card button {
   background: #0000a8;
   color: white;
-  border: none;
-  padding: 8px;
 }
 
-footer {
-  background: black;
-  color: white;
-  text-align: center;
+/* ABOUT */
+.about {
+  display: flex;
+  padding: 30px;
+}
+
+.about-left {
+  width: 50%;
+}
+
+.about-right {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.info-box {
+  border: 1px solid #ddd;
   padding: 10px;
 }
